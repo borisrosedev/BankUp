@@ -1,0 +1,82 @@
+* {
+        /* 
+            j'ai un élément qui a une largeur une width de 100px 
+        
+            je lui ajoute un padding de 10px 
+            padding : 10px
+
+            quelle est la largeur totale ? 
+            100px si border-box
+
+        */
+    box-sizing: border-box
+}
+/*ici body est un sélecteur de type  car il existe une balise body */
+body {
+    opacity: 0;
+    animation: show-down  2s ease-in-out forwards;
+    margin: 0;
+ /* ceci est une déclaration de propriétés CSS qui suit le sélecteur de type body */
+    /* background-color: #ffc0cb;
+    background-color: #ececec; */
+    background-image: url("./restaurant.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* Je dis au-dessous que je déclare lesdites propriétés pour les enfants header DIRECTS du body */
+body > header {
+    background-color: rgb(245, 210, 176);
+    position: fixed;
+    height: 8vh;
+    align-items: center;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between; 
+   
+}
+
+main {
+    /* écarte les enfants de main du bord supérieur de main de 8% de la hauteur de l'écran*/
+    height: 100vh;
+    padding-top: 8vh;
+    section {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+
+        header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+    }
+}
+
+
+@keyframes show-down {
+    
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+

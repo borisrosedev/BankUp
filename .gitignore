@@ -1,0 +1,4 @@
+#ceux sont les fichiers et dossiers que je ne veux pas indexer, ni sauvager ni envoyer vers Internet 
+node_modules
+.vscode
+.DS_Store
