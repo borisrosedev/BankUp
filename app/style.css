@@ -1,0 +1,17 @@
+.digits-board {
+    /* ces propriétés sont liées au parent des div ayant pour classe en l'occurrence digit */
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.screen {
+    border: solid beige 2px;
+    background-color: beige;
+}
+
+.digit {
+    background-color: aquamarine;
+    border: solid 2px black;
+}
