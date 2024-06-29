@@ -52,7 +52,7 @@ export default function(){
                     Si vous définissez 2 classes pour un élément HTML en l'occurrence main la deuxième prédomine toujours 
                 
                 -->
-                <p> Vous êtes sur la page d'accueil de notre site </p>
+                <p>Vous êtes sur la page d'accueil de notre site</p>
             
             </main>
         
