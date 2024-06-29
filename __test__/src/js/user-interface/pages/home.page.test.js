@@ -1,6 +1,6 @@
-/**
-* @jest-environment jsdom
-*/
+// /**
+// * @jest-environment jsdom
+// */
 import $ from 'jquery';
 import homePage from "../../../../../src/js/user-interface/pages/home-page.js"
 
@@ -11,7 +11,7 @@ let app;
 
 describe('HomePage Suite', () => {
 
-    beforeEach(() => {
+    beforeAll(() => {
         app = document.createElement('div');
         app.id = "app";
         document.body.appendChild(app)
@@ -24,9 +24,15 @@ describe('HomePage Suite', () => {
 
 function tests(){
 
-    test('homepage is into app div', () => {
-        var paragraphText = $('.main p').text();
-        expect(paragraphText).toBe("Vous êtes sur la page d'accueil de notre site")
+ 
+    test('should have at least one button', () => {
+        expect($('button.home-page__button').length).toBeGreaterThan(0)
+
+    })
+
+    test('should have a button with content Se connecter', () => {
+    
+        expect($('button.home-page__button').first().text()).toBe('Se connecter')
 
     })
 

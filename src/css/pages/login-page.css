@@ -1,5 +1,4 @@
-.home-page__main {
-
+.login-page__main {
     min-height: 100vh;
     background-image: url('../../../assets/bg.jpg');
     background-position: center;
@@ -7,6 +6,4 @@
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
-
-        
 }

@@ -1,27 +1,25 @@
+import HomeContainer from "./src/js/containers/HomeContainer.js";
+import header from "./src/js/user-interface/layout/header.js";
 import homePage from "./src/js/user-interface/pages/home-page.js"
+import loginPage from "./src/js/user-interface/pages/login-page.js";
 
 
 
-function onNavigate(){
-    console.log('🟠 dev says: onNavigate has been called')
-}
 
-function navigateToPage(h){
+export function navigateToPage(h){
+
+    window.history.pushState({}, "", window.location.pathname + h)
     console.log('🟠 dev says: navigateToPage has been called')
-
-    /* 
-    
-    
-        Je veux récupérer quelque chose qui existe dans le document autrement dit sur la page html donc j'utilise l'objet document qui représente la page et je cherche en utilisant getElementById qui est une méthode de document, l'élément qui a pour id ce que j'ai passé en argument à la méthode autrement dit la valeur que je lui a passé. En l'occurrence j'ai passé la valeur 'app' qui est une chaîne de caractères. 
-    
-        on a donné un nom à la variable ici app on l'a assigné comme constante autrement dit sa valeur ne peut pas changer 
-    
-    */
-
+    const app = document.getElementById('app')
+    app.innerHTML = "";
+    app.innerHTML += header()
     switch(h){
-        case '':
-            const app = document.getElementById('app')
-            app.innerHTML = homePage()
+        case '':   
+            app.innerHTML += homePage()
+            new HomeContainer(window.onNavigate)
+            break;
+        case '#login':
+            app.innerHTML += loginPage()
             break;
         default:
             break;
@@ -34,6 +32,11 @@ export default function(){
     navigateToPage(window.location.hash)
     
 }
+
+window.onNavigate = (h) => {
+    navigateToPage(h)
+}
+
 
 window.onpopstate = () => {
     navigateToPage(window.location.hash)

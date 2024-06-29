@@ -1,0 +1,12 @@
+.button {
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: all ease-in-out 300ms;
+    align-self: center;
+    &:hover {
+        transform: translateY(2px);
+        background-color: var(--primar-color);
+        cursor: pointer;
+    }
+}

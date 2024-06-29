@@ -1,22 +1,16 @@
 @import url('/src/css/base/topology.css');
-/* je mets le chemin vers le fichier topology parce que je vais utiliser potentillement son contenu dans variables.css */
 @import url('/src/css/base/variables.css');
-/* je mets le chemin vers le fichier variables avant parce que je vais utiliser potentillement son contenu dans base.css */
 @import url('/src/css/base/base.css');
 
 
 
-
 /* COMPONENTS , SOUS-ENTENDU D'UNE PAGE */
+@import url('/src/css/components/button.css');
+@import url('/src/css/components/nav.css');
+@import url('/src/css/layout/header.css');
 @import url('/src/css/components/main.css');
-
-
-
-
-
-
-
 
 
 /* PAGES */
 @import url('/src/css/pages/home-page.css');
+@import url('/src/css/pages/login-page.css');
