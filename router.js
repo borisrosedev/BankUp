@@ -1,10 +1,12 @@
 import homePage from "./src/js/user-interface/pages/home-page.js"
 
+
+
 function onNavigate(){
     console.log('🟠 dev says: onNavigate has been called')
 }
 
-function navigateToPage(){
+function navigateToPage(h){
     console.log('🟠 dev says: navigateToPage has been called')
 
     /* 
@@ -15,13 +17,24 @@ function navigateToPage(){
         on a donné un nom à la variable ici app on l'a assigné comme constante autrement dit sa valeur ne peut pas changer 
     
     */
-    const app = document.getElementById('app')
-    app.innerHTML = homePage()
+
+    switch(h){
+        case '':
+            const app = document.getElementById('app')
+            app.innerHTML = homePage()
+            break;
+        default:
+            break;
+    }
+  
 }
 
 export default function(){
     console.log('🎾 dev says: router has been called')
-
-    navigateToPage()
+    navigateToPage(window.location.hash)
     
+}
+
+window.onpopstate = () => {
+    navigateToPage(window.location.hash)
 }

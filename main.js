@@ -1,4 +1,6 @@
 import router from "./router.js"
+import './styles.css';
+
 
 console.log('🟢 dev says : main.js')
 
