@@ -1,0 +1,11 @@
+/* 
+
+    Il s'agit d'un sélecteur de classe donc il commence par un .
+
+*/
+.main {
+
+    display: flex;
+    flex-direction: column;
+
+}

@@ -1,0 +1,10 @@
+.home-page__main {
+
+    min-height: 100vh;
+    background-image: url('../../../assets/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+        
+}

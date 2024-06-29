@@ -1,0 +1,11 @@
+:root {
+    /* 
+    
+        vous déclarer des variables comme --font-fam dans ce sélecteur de la pseudo-classe :root 
+        la pratique veut que vous mettiez --fonction-de-la-variable
+
+        --font-fam est la clé et 'Poppins', sans-serif est la valeur 
+        // donc quand vous voulez utiliser la valeur vous utilisez le nom de la clé
+    */
+    --font-fam: 'Poppins', sans-serif;
+}

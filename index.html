@@ -1,82 +1,22 @@
-<!DOCTYPE html><!-- ceci est un commentaire  mais qui donne la version du html que vous utilisez HTML 5 -->
-<html>
-<!-- html est la première balise d'une page html et cet élément HTML a deux enfants -->
-    
-    <head>
-        <!-- on veut que le navigateur fasse apparaître les accents de la langue française donc on lui précise l'encodage qu'il doit utiliser pour le contenu de cette page -->
-        <meta charset="utf-8">
-        <!-- charset est un attribut -->
-         <!-- qui aura comme valeur utf-8  -->
-        
-        <!-- la balise link me permet de relier en précisant la relation qui existe avec l'actuelle page, un autre fichier qui peut en l'occurrence lui apporter de la mise en page -->
-        <link rel="stylesheet" href="./style.css">
-        
-    
-    </head>
-    <body>
-        <!-- dans les bonnes pratiques si vous voulez que qqch soit affiché sur la page vous DEVEZ l'écrire à l'intérieur des balises ouvrante et fermante body -->
-        
-        <header>
-            <a href="">Chez Babacar</a>
-            <nav>
-                <a href="">Accueil</a>
-                <a href="">Contact</a>
-                <a href="">S'inscrire</a>
-            </nav>    
-        </header>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankUp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- SEULEMENT 2 BALISES ENFANTS À ECRIRE -->
 
-        <main>
-            <section>
-                <header>
-                    <h1> Bienvenue Chez Babacar </h1>
-                    <p>Le restaurant gastronomique préféré des morfals </p>
-                </header>
-            </section>
-        </main>
-        
-
-    </body>
-
-    <!-- On doit mettre la balise script en TOUT dernier rien ne doit être en-dessous et tout doit être au-dessus -->
-    <script>
-        // //Le contenu situé entre les balises scripts est du Javascript qui est un langage de programmation qui est compris par le navigateur en l'espèce par Chrome
-        // console.log(1) // input 1 output 1 = ça veut dire que l'input est un littéral ( en l'occurrence de nombre)
-
-        // console.log("Mama"); // Chaîne de caractères = String 
-
-        // console.log(true);
-        // console.log(false);
-
-        // console.log(["Mama", true, 1, ["Papa"]][3]) // un array est une entité ou variable qui peut contenir plusieurs éléments le premier d'entre eux étant toujours à l'indice 0 et le dernier à l'indice length - 1
-
-        // // la notion de variable
-        // /* une variable c'est une entité qui stocke une valeur */
-
-
-        // const arr = ["Mama", true, 1, ["Papa"]]
-
-        // arr.push(1)
-
-        // console.log(arr[arr.length - 1])
-
-
-        // // le mot clé (keyword) let permet de faire comprendre au système qui alloue de la mémoire que la valeur stocké pourrait être modifié, 
-        // // donc let caractère les variables mutables (modifiables)
-        // // const est le mot clé qui précise que la valeur de la variable ne va pas pouvoir être modifiée;
-        // let i; // déclaration une variable nommé 1 mais on ne lui a pas assigné de valeur d'où le terme de déclaration 
-        // i = 2; // vous lui affectez sa première valeur et on parle d'initialisation
-        // i = i + 2; // vous réaffectez une valeur à i 
-        // console.log(i)
+    <div id="app">
+      <!-- on va réaliser une SINGLE PAGE APPLICATION-->
+      <!-- TOUTE VOTRE APPLICATION DYNAMISÉE VA SE TROUVER ICI-->
+    </div>
 
 
 
-        // function add(){
-        //     // les fonctions sont des morceaux de code qui contiennent une partie de la logique de résolution d'un problème 
-        // }
-        
-
-    </script>
-
-
+    <!-- LA BALISE QUI VA PERMETTRE D'EXCUTER DU JAVASCRIPT APRES QUE LE CONTENU DE CETTE PAGE EST CHARGÉ-->
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
-

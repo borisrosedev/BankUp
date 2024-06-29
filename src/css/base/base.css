@@ -1,0 +1,71 @@
+/* NORMALIZE OU RESET OU REBOOT */
+/* tout ce qui est placé AVANT L'ACOLADE OUVRANTE EST UN SÉLECTEUR */
+* {
+    box-sizing: border-box;
+    /* avec content-box  la largeur d'une box  de 100px avec padding de 10px (left and right) aurait été 120px */
+    /* avec border-box la largeur d'une box  de 100px avec padding de 10px aurait été toujours 100px */
+}
+
+
+html {
+    /* var(--font-fam) est la façon d'utiliser la valeur stockée dans une variable css / propriété personnalisée */
+    font-family: var(--font-fam); /* var() est une fonction css */
+}
+
+
+/* 
+    SELECTEUR DE TYPE COMME HTML BODY 
+    Quand vous ne voyez ni . ni #devant le nom du sélecteur il s'agit d'un sélecteur de type 
+    Si vous voyez un . cela sera un sélecteur de classe 
+    Si vous voyez un # cela sera un sélecteur d'identifiant
+*/
+body {
+    margin: 0; /* à initialiser à chaque projet*/
+    /* je dis que la hauteur minimum du corps de la page autrement de l'endroit où on peut écrire du contenu est 100% de la hauteur de l'écran sur lequel est ouvert la page web*/
+    min-height: 100vh;
+
+    /* 
+
+        on va faire en sorte que le corps de notre page soit une flex box ce qui va rendre plus simple le responsive web design 
+
+        à savoir le fait que le contenu puisse être aussi bien visible en desktop en tablette et sur un téléphone
+    */
+    display: flex;
+    flex-direction: column; /* va permettre que l'orientation des éléments enfants de la flex se fasse sur l'axe des ordonnées autrement dit de haut en bas*/
+
+}
+
+
+/* c'est subjectif c'est ma façon de faire il y en a d'autres*/
+img {
+    object-fit: cover; /* que cela doit être une image qui s'étire jusqu'à couvrir son parent mais cela peut dépasser (overflow) le parent d'où les propriétés définies en-dessous pour nous assurer que tel ne sera pas le cas */
+    width: 100%; /* 100% de la largeur de son parent*/
+    height: 100%; /* 100% de la hauteur de son parent*/
+}
+
+figure {
+    /* 
+    
+        Cela sera toujours le parent d'un enfant unique qui sera une image 
+
+        Figure n'aura ici qu'un seul enfant qui sera nécessairement une image 
+
+        je redéfins les valeurs par défault des propriétés padding et margin ( à la façon de body )
+    
+    */
+
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+
+    /*  Dans une application y a souvent des éléments qui se ressemblent et généralement on les regroupe en des listes non ordonnées ( d'où le ul  qui veut dire unordered list ) et les list item ( les éléments de la liste ) sont également à gérer 
+    
+    je réinitiliser les valeurs des propriétés padding, margin et list-style 
+    */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
