@@ -9,8 +9,10 @@
 @import url('/src/css/components/nav.css');
 @import url('/src/css/layout/header.css');
 @import url('/src/css/components/main.css');
+@import url('/src/css/components/article-input.css');
+@import url('/src/css/components/form.css');
 
 
 /* PAGES */
 @import url('/src/css/pages/home-page.css');
-@import url('/src/css/pages/login-page.css');
+@import url('/src/css/pages/log-page.css');

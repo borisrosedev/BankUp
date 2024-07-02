@@ -1,7 +1,8 @@
 export default class Button {
-    constructor(id, className, type, content){
-        this.id =  id ? id : "";
+    constructor({type, content, id, className }){
+
         this.className = className ? className : "";
+        this.id =  id ? id : "";
         this.type = type ? type : "button" 
         this.content = content ? content : "❌ Aucun contenu"
     }

@@ -3,7 +3,7 @@ import button from "../components/button.js";
 
 export default function(){
 
-    let btn = new Button("", "home-page__button", "", "Se connecter")
+    let btn = new Button({className: "home-page__button",content: "Se connecter"})
     return(
         `
             <main class="main home-page__main">   

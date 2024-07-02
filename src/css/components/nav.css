@@ -5,7 +5,7 @@
             transition: all ease-in-out 300ms;
         }
         &:hover > i {
-            color: var(--primar-color);
+            color: var(--primary-color);
         }
     }
 }

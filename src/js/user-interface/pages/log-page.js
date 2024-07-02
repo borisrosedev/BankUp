@@ -1,0 +1,67 @@
+import Form from "../../models/Form.js"
+import form from "../components/form";
+
+export default function(showLoginPage){
+
+    let page = {}
+    let formInstance;
+    let data = {
+        id: "log-form",
+        className: "log-form",
+        inputs: [
+            {
+                type:"email",
+                placeholder: "Entrer votre email",
+                id: "email"
+            },
+            {
+                type:"password",
+                placeholder: "Entrer votre mot de passe",
+                id: "password" 
+            }
+        ],
+        buttons: [
+            {
+                id: "submit-button",
+                type:"submit"
+            },
+            {
+                id: "reset-button",
+                type: "reset"
+            }
+        ]
+    }
+    if(showLoginPage){
+        page.title = "Se connecter"
+  
+        formInstance = new Form(data)
+    } else {
+        page.title = "Register Page"
+
+        data.inputs.push(
+            {
+                type:"password",
+                placeholder: "Confirmez votre mot de passe",
+                id: "confirmed-password" 
+            }
+        )
+        formInstance = new Form(data)
+    }
+
+
+    return(
+        `
+         <main class="main log-page__main">   
+            <h1 data-testid="log-page__title">${page.title}</h1>
+            <section>
+                ${form(formInstance)}
+            </section>
+            <section>
+            ${showLoginPage ? `<small>Pas encore inscrit(e) ? Cliquez <a href="#register">ici</a> </small>`: `<small>Déjà inscrit(e) ? Cliquez <a href="#login">ici</a> </small>`}
+            </section>
+         </main>
+        
+        
+        `
+    )
+}

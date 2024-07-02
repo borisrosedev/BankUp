@@ -8,7 +8,7 @@ import "@testing-library/jest-dom"
 let user;
 
 
-describe('HomeContainer Suit', () => {
+describe('HomeContainer Suite', () => {
 
     beforeEach(() => {
         const app = document.createElement('div')

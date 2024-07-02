@@ -1,0 +1,14 @@
+.article-input {
+  
+    display: flex;
+    flex-direction: column;
+    margin-block: 10px;
+
+    input {
+        padding: 10px;
+        outline: var(--primary-color) solid 1px;
+        border-radius: 10px;
+        border: none;
+    }
+    
+}
