@@ -10,6 +10,9 @@ module.exports = {
   },
   mode: "development",
   watch: true,
+  resolve: {
+    extensions: ['.js', '.json'], // Extensions à résoudre
+  },
   module: {
     rules: [
       {
@@ -18,6 +21,10 @@ module.exports = {
         use: {
           loader: "babel-loader",
         },
+      },
+      {
+        test: /\.json$/, // Expression régulière pour les fichiers JSON
+        type: 'json', // Type de module pour JSON
       },
       {
         test: /\.css$/,
@@ -34,7 +41,7 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: "assets", to: "assets" }],
+      patterns: [{ from: "assets", to: "assets", from: "data", to : "data" }],
     }),
     new HtmlWebpackPlugin({
       template: "index.html",

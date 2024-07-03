@@ -8,10 +8,12 @@ export default function(input){
                     placeholder="${input.placeholder}"
                     name="${input.name}"
                     type="${input.type}"
+                    data-testid="${input.id}"
                     class="input ${input.className}"
                     required
                     aria-required
                 />
+                <section id="${input.id}-error" class="input-error"></section>
             </article>
     
         `

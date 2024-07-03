@@ -22,7 +22,9 @@ export default function(){
     console.log('🎾 dev says: header has been called')
     return(
         `
-            <header class="header">
+            <header 
+                class="header" data-testid="app-header"
+            >
                 <a href="./">BankUp</a>
                 ${navBar()}
             </header>

@@ -30,9 +30,13 @@
     "webpack-dev-server": "^5.0.4"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFiles": [
+      "<rootDir>/__test__/setup-tests.js"
+    ]
   },
   "dependencies": {
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "node-fetch": "^2.7.0"
   }
 }

@@ -5,3 +5,4 @@ npm install --save-dev babel-jest @babel/core @babel/preset-env
 npm install --save-dev @testing-library/dom
 npm install --save-dev @testing-library/user-event
 npm install --save-dev @testing-library/jest-dom
+npm install node-fetch@v2

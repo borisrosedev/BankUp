@@ -12,3 +12,12 @@
         cursor: pointer;
     }
 }
+
+.disabled-button {
+    padding: 2px 20px;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    transition: all ease-in-out 300ms;
+    align-self: center;
+}

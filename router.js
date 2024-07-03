@@ -3,7 +3,7 @@ import LogContainer from "./src/js/containers/LogContainer.js";
 import header from "./src/js/user-interface/layout/header.js";
 import homePage from "./src/js/user-interface/pages/home-page.js"
 import logPage from "./src/js/user-interface/pages/log-page.js";
-
+import notification from "./src/js/user-interface/layout/notification.js"
 
 
 
@@ -14,6 +14,7 @@ export function navigateToPage(h){
     const app = document.getElementById('app')
     app.innerHTML = "";
     app.innerHTML += header()
+    app.innerHTML += notification()
     switch(h){
         case '':   
             app.innerHTML += homePage()

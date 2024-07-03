@@ -1,12 +1,15 @@
 @import url('/src/css/base/topology.css');
 @import url('/src/css/base/variables.css');
+@import url('/src/css/utils/keyframes.css');
 @import url('/src/css/base/base.css');
 
 
 
 /* COMPONENTS , SOUS-ENTENDU D'UNE PAGE */
+@import url('/src/css/components/paragraph.css');
 @import url('/src/css/components/button.css');
 @import url('/src/css/components/nav.css');
+@import url('/src/css/layout/notification.css');
 @import url('/src/css/layout/header.css');
 @import url('/src/css/components/main.css');
 @import url('/src/css/components/article-input.css');

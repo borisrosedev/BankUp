@@ -10,5 +10,17 @@
         border-radius: 10px;
         border: none;
     }
+
+    .input-error {
+        height: 20px;
+        margin: 2px;
+        
+        small {
+            color: white;
+            height: 100%;
+            opacity: 0;
+            animation: show-right 1000ms ease-in-out 2000ms forwards;
+        }
+    }
     
 }

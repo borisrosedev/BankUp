@@ -23,11 +23,13 @@ export default function(showLoginPage){
         buttons: [
             {
                 id: "submit-button",
-                type:"submit"
+                type:"submit",
+                content: 'Valider'
             },
             {
                 id: "reset-button",
-                type: "reset"
+                type: "reset",
+                content: "Réinitialiser"
             }
         ]
     }
