@@ -1,6 +1,6 @@
 .dashboard__main {
   min-height: 100vh;
-  background-image: url('../../../assets/dashboard.jpg');
+  background-image: url("../../../assets/dashboard.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

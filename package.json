@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "build": "npm run format:write && npm run package",
     "test": "jest",
     "start": "webpack serve --mode development --open",
     "package": "webpack --mode production",
