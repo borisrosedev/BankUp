@@ -1,9 +1,8 @@
 import articleInput from "./article-input";
 import button from "./button";
 
-export default function(data){
-    return(
-        `
+export default function (data) {
+  return `
             <form id="${data.id}" class="form ${data.className}">
                 <section class="form__inputs">
                     ${data.inputs.map((ipt) => articleInput(ipt)).join("")}
@@ -13,6 +12,5 @@ export default function(data){
                 </section>
             </form>
         
-        `
-    )
+        `;
 }

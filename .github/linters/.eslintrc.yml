@@ -1,0 +1,45 @@
+env:
+  commonjs: true
+  es6: true
+  jest: true
+  node: true
+
+#globals
+ignorePatterns:
+  - "!.*"
+  - "**/node_modules/.*"
+  - "**/dist/.*"
+  - "**/coverage/.*"
+  - "*.json"
+
+parser: "@babel/eslint-parser"
+
+parserOptions:
+  ecmaVersion: 2023
+  sourceType: module
+  requireConfigFile: false
+  babelOptions:
+    babelrc: false
+    configFile: false
+    presets:
+      - jest
+plugins:
+  - jest
+extends:
+  - eslint:recommended
+  - plugin:github/recommended
+  - plugin:jest/recommended
+rules:
+  {
+    "camelcase": "off",
+    "eslint-comments/no-use": "off",
+    "eslint-comments/no-unsued-disable": "off",
+    "i18n-test/no-en": "off",
+    "import/no-commonjs": "off",
+    "import/no-namespace": "off",
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "prettier/prettier": "error",
+    "semi": "off",
+    "no-undef": "off"
+  }

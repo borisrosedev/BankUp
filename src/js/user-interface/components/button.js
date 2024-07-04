@@ -1,6 +1,5 @@
-export default function(btn){
-    return(
-        `
+export default function (btn) {
+  return `
             <button 
                 id="${btn.id}"
                 class="button ${btn.className}"
@@ -8,8 +7,5 @@ export default function(btn){
                 data-testid="${btn.id}"
             >${btn.content}</button>
         
-        `
-    )
+        `;
 }
-
-

@@ -1,26 +1,24 @@
 .article-input {
-  
-    display: flex;
-    flex-direction: column;
-    margin-block: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-block: 10px;
 
-    input {
-        padding: 10px;
-        outline: var(--primary-color) solid 1px;
-        border-radius: 10px;
-        border: none;
-    }
+  input {
+    padding: 10px;
+    outline: var(--primary-color) solid 1px;
+    border-radius: 10px;
+    border: none;
+  }
 
-    .input-error {
-        height: 20px;
-        margin: 2px;
-        
-        small {
-            color: white;
-            height: 100%;
-            opacity: 0;
-            animation: show-right 1000ms ease-in-out 2000ms forwards;
-        }
+  .input-error {
+    height: 20px;
+    margin: 2px;
+
+    small {
+      color: white;
+      height: 100%;
+      opacity: 0;
+      animation: show-right 1000ms ease-in-out 2000ms forwards;
     }
-    
+  }
 }

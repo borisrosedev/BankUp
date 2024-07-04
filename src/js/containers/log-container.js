@@ -37,11 +37,10 @@ export default class LogContainer {
           });
 
           setTimeout(() => {
-            if(response == "authorized"){
-              this.onNavigate("#dashboard")
+            if (response == "authorized") {
+              this.onNavigate("#dashboard");
             }
-          }, 2000)
-         
+          }, 2000);
         }
         break;
       case false:
@@ -53,7 +52,6 @@ export default class LogContainer {
             content: "Formulaire incomplet",
           });
         } else {
-       
           const response = this.authService.register({
             email: emailValue,
             password: passwordValue,
@@ -61,12 +59,10 @@ export default class LogContainer {
           });
 
           setTimeout(() => {
-            if(response == "registered"){
-              this.onNavigate("#dashboard")
+            if (response == "registered") {
+              this.onNavigate("#dashboard");
             }
-          }, 2000)
-        
-          
+          }, 2000);
         }
 
         break;

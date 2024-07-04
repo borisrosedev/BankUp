@@ -1,6 +1,5 @@
-export default function(data){
-    return(
-        `
+export default function (data) {
+  return `
             <section class="user-profile" id="user-profile">
             
 
@@ -8,6 +7,5 @@ export default function(data){
             </section>
         
         
-        `
-    )
+        `;
 }

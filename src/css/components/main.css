@@ -4,9 +4,7 @@
 
 */
 .main {
-
-    display: flex;
-    flex-direction: column;
-    padding-top: 8vh;
-
+  display: flex;
+  flex-direction: column;
+  padding-top: 8vh;
 }

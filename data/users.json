@@ -1,11 +1,11 @@
 [
-    {
-        "id":1,
-        "photoUrl":"https://cdn.pixabay.com/photo/2024/06/18/07/03/mafia-8837160_1280.jpg",
-        "firstname":"Marco",
-        "lastname":"Marcello",
-        "email":"marco@gmail.com",
-        "password":"caroline",
-        "wallet": 1200
-    }
+  {
+    "id": 1,
+    "photoUrl": "https://cdn.pixabay.com/photo/2024/06/18/07/03/mafia-8837160_1280.jpg",
+    "firstname": "Marco",
+    "lastname": "Marcello",
+    "email": "marco@gmail.com",
+    "password": "caroline",
+    "wallet": 1200
+  }
 ]

@@ -1,27 +1,24 @@
 .mini-profile-card {
-    flex-direction: column;
-    border: solid #fff 2px;
+  flex-direction: column;
+  border: solid #fff 2px;
 
+  & section:first-of-type {
+    display: flex;
+    color: #fff;
 
-    & section:first-of-type {
-        display: flex;
-        color: #fff;
-
-        figure {
-            display: flex;
-        }
-
-        & >  section:first-of-type {
-            p {
-                margin: 0;
-            }
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    
+    figure {
+      display: flex;
     }
-    
+
+    & > section:first-of-type {
+      p {
+        margin: 0;
+      }
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

@@ -1,6 +1,5 @@
-export default function(input){
-    return(
-        `
+export default function (input) {
+  return `
             <article class="article-input">
                 <label for="${input.id}"></label>
                 <input 
@@ -16,6 +15,5 @@ export default function(input){
                 <section id="${input.id}-error" class="input-error"></section>
             </article>
     
-        `
-    )
+        `;
 }

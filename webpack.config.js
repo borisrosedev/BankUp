@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const { VueLoaderPlugin } = require('vue-loader');
+const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
   entry: "./main.js",
@@ -13,39 +13,39 @@ module.exports = {
   watch: true,
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm-browser.js' // Résoudre le runtime de Vue.js correctement
+      vue$: "vue/dist/vue.esm-browser.js", // Résoudre le runtime de Vue.js correctement
     },
-    extensions: ['.js']
+    extensions: [".js"],
   },
   module: {
     rules: [
       {
         test: /\.vue$/, // Utiliser vue-loader pour les fichiers .vue
-        loader: 'vue-loader'
+        loader: "vue-loader",
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'] // Utiliser le preset Env pour JS
-          }
-        }
+            presets: ["@babel/preset-env"], // Utiliser le preset Env pour JS
+          },
+        },
       },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-react'] // Utiliser le preset React
-          }
-        }
+            presets: ["@babel/preset-react"], // Utiliser le preset React
+          },
+        },
       },
       {
         test: /\.json$/, // Expression régulière pour les fichiers JSON
-        type: 'json', // Type de module pour JSON
+        type: "json", // Type de module pour JSON
       },
       {
         test: /\.css$/,
@@ -53,9 +53,9 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'images/[name][ext][query]',
+          filename: "images/[name][ext][query]",
         },
       },
     ],
@@ -63,7 +63,16 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new CopyPlugin({
-      patterns: [{ from: "assets", to: "assets", from: "data", to : "data" }],
+      patterns: [
+        {
+          from: "assets",
+          to: "assets",
+        },
+        {
+          from: "data",
+          to: "data",
+        },
+      ],
     }),
     new HtmlWebpackPlugin({
       template: "index.html",

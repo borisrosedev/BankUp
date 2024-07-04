@@ -1,6 +1,5 @@
-export default function(data){
-    return(
-        `
+export default function (data) {
+  return `
             <section class="wallet" id="wallet">
             
 
@@ -8,6 +7,5 @@ export default function(data){
             </section>
         
         
-        `
-    )
+        `;
 }

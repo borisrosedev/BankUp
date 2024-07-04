@@ -1,11 +1,11 @@
 .nav {
-    a {
-        margin-inline: 10px;
-        i {
-            transition: all ease-in-out 300ms;
-        }
-        &:hover > i {
-            color: var(--primary-color);
-        }
+  a {
+    margin-inline: 10px;
+    i {
+      transition: all ease-in-out 300ms;
     }
+    &:hover > i {
+      color: var(--primary-color);
+    }
+  }
 }
