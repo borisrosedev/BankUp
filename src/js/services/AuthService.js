@@ -14,8 +14,10 @@ export default class AuthService {
             console.log('ici')
             localStorage.setItem('token', JSON.stringify({ username: email}))
             this.notificationService.setNotification({ type: 'positive', content: 'Connexion réussie'})
+            return "authorized"
         } else {
             this.notificationService.setNotification({ type: 'negative', content: 'Connexion échouée'})
+            return "unauthorized"
         }
     }
 
@@ -23,7 +25,20 @@ export default class AuthService {
         this.usersService.createUser({email, password})
             .then((res) => {
                 if(res){
-                    this.notificationService.setNotification({ type: 'positive', content: 'Inscription réussie'})
+
+                    if(res == "error"){
+                        this.notificationService.setNotification({ type: 'negative', content: 'Echec de l\'inscription'}) 
+                        return res
+                    } else {
+
+                        this.notificationService.setNotification({ type: 'positive', content: 'Inscription réussie'})
+                        return "registered"
+
+                    }
+                   
+                } else {
+                     this.notificationService.setNotification({ type: 'positive', content: 'Erreur lors de l\'inscription'})
+                    return "error"
                 }
             })
     }

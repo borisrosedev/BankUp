@@ -26,7 +26,7 @@ export default class NotificationService {
             setTimeout(() => {
                 notification.removeChild(para)
             }, 1000)
-        }, 3000)
+        }, 2000)
 
     }
 }

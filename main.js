@@ -1,5 +1,7 @@
 import router from "./router.js"
 import './styles.css';
+import 'alpinejs';
+
 
 console.log('🟢dev says : main.js')
 

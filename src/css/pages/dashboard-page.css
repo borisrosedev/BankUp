@@ -1,0 +1,18 @@
+.dashboard__main {
+    min-height: 100vh;
+    background-image: url('../../../assets/dashboard.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: color;
+    h1 {
+        color: #fff;
+    }
+  
+
+
+
+}

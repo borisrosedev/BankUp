@@ -1,35 +1,32 @@
-# Utiliser une image de base Ubuntu
-FROM ubuntu:20.04
+# Étape 1 : Construction de l'application avec Webpack
+FROM node:14 as build
 
-# Définir le mainteneur
-LABEL maintainer="boris.rose.dev@gmail.com"
+# Créer et définir le répertoire de travail
+WORKDIR /usr/src/app
 
-# Mettre à jour les paquets et installer les compilateurs pour C, C++, Go et Rust
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    build-essential \
-    gcc \
-    g++ \
-    curl \
-    wget \
-    git \
-    software-properties-common \
-    && rm -rf /var/lib/apt/lists/*
+# Copier les fichiers package.json et package-lock.json dans le répertoire de travail
+COPY package*.json ./
 
-# # Installer Golang
-# RUN wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz && \
-#     tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz && \
-#     rm go1.18.3.linux-amd64.tar.gz
+# Installer les dépendances de l'application
+RUN npm install
 
-# # Définir les variables d'environnement pour Go
-# ENV PATH="/usr/local/go/bin:${PATH}"
+# Copier le reste de l'application dans le répertoire de travail
+COPY . .
 
-# # Installer Rust
-# RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-# ENV PATH="/root/.cargo/bin:${PATH}"
+# Construire l'application
+RUN npm run build
 
-# Définir le répertoire de travail
-WORKDIR /workspace
+# Étape 2 : Serveur Nginx pour servir l'application
+FROM nginx:alpine
 
-# Commande par défaut pour rester dans le shell
-CMD ["/bin/bash"]
+# Copier les fichiers construits depuis l'étape 1
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+
+# Copier la configuration nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Exposer le port que Nginx utilise
+EXPOSE 80
+
+# Commande par défaut pour démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]
