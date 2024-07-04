@@ -3,7 +3,7 @@ name: Check Transpiled JavaScript
 on:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
