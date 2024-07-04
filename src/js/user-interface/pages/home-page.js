@@ -1,4 +1,4 @@
-import Button from "../../models/Button.js";
+import Button from "../../models/Button/Button.js";
 import button from "../components/button.js";
 
 export default function(){

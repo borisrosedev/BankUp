@@ -1,5 +1,5 @@
-import ArticleInput from "./ArticleInput";
-import Button from "./Button";
+import ArticleInput from "../ArticleInput/ArticleInput.js";
+import Button from "../Button/Button.js";
 
 export default class Form {
 

@@ -1,4 +1,4 @@
-import Form from "../../models/Form.js"
+import Form from "../../models/Form/Form.js"
 import form from "../components/form";
 
 export default function(showLoginPage){
