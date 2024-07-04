@@ -15,5 +15,5 @@ export default function (input) {
                 <section id="${input.id}-error" class="input-error"></section>
             </article>
     
-        `;
+        `
 }

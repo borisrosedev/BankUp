@@ -7,5 +7,5 @@ export default function (btn) {
                 data-testid="${btn.id}"
             >${btn.content}</button>
         
-        `;
+        `
 }

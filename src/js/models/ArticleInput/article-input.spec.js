@@ -1,20 +1,20 @@
-import ArticleInput from "./ArticleInput";
+import ArticleInput from "./ArticleInput"
 
-let articleInput;
+let articleInput
 describe("ArticleInput Suite", () => {
   beforeAll(() => {
     articleInput = new ArticleInput({
       id: "email",
       placeholder: "Entrez votre email",
-      className: "",
-    });
-  });
+      className: ""
+    })
+  })
 
   test("should have a text type by default", () => {
-    expect(articleInput.type).toBe("text");
-  });
+    expect(articleInput.type).toBe("text")
+  })
 
   test("should have a text type by default", () => {
-    expect(articleInput.className).toBe("");
-  });
-});
+    expect(articleInput.className).toBe("")
+  })
+})

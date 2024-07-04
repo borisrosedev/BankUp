@@ -1,5 +1,5 @@
 function navBar() {
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem("token"))
 
   return `
             <nav class="nav">
@@ -18,11 +18,11 @@ function navBar() {
             </nav>
         
         
-        `;
+        `
 }
 
 export default function () {
-  console.log("🎾 dev says: header has been called");
+  console.log("🎾 dev says: header has been called")
   return `
             <header 
                 class="header" data-testid="app-header"
@@ -31,5 +31,5 @@ export default function () {
                 ${navBar()}
             </header>
         
-        `;
+        `
 }

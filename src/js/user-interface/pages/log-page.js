@@ -1,50 +1,50 @@
-import Form from "../../models/Form/Form.js";
-import form from "../components/form";
+import Form from "../../models/Form/form-model.js"
+import form from "../components/form"
 
 export default function (showLoginPage) {
-  let page = {};
-  let formInstance;
-  let data = {
+  const page = {}
+  let formInstance
+  const data = {
     id: "log-form",
     className: "log-form",
     inputs: [
       {
         type: "email",
         placeholder: "Entrer votre email",
-        id: "email",
+        id: "email"
       },
       {
         type: "password",
         placeholder: "Entrer votre mot de passe",
-        id: "password",
-      },
+        id: "password"
+      }
     ],
     buttons: [
       {
         id: "submit-button",
         type: "submit",
-        content: "Valider",
+        content: "Valider"
       },
       {
         id: "reset-button",
         type: "reset",
-        content: "Réinitialiser",
-      },
-    ],
-  };
+        content: "Réinitialiser"
+      }
+    ]
+  }
   if (showLoginPage) {
-    page.title = "Se connecter";
+    page.title = "Se connecter"
 
-    formInstance = new Form(data);
+    formInstance = new Form(data)
   } else {
-    page.title = "Register Page";
+    page.title = "Register Page"
 
     data.inputs.push({
       type: "password",
       placeholder: "Confirmez votre mot de passe",
-      id: "confirmed-password",
-    });
-    formInstance = new Form(data);
+      id: "confirmed-password"
+    })
+    formInstance = new Form(data)
   }
 
   return `
@@ -54,10 +54,10 @@ export default function (showLoginPage) {
                 ${form(formInstance)}
             </section>
             <section>
-            ${showLoginPage ? `<small>Pas encore inscrit(e) ? Cliquez <a href="#register">ici</a> </small>` : `<small>Déjà inscrit(e) ? Cliquez <a href="#login">ici</a> </small>`}
+            ${showLoginPage ? '<small>Pas encore inscrit(e) ? Cliquez <a href="#register">ici</a> </small>' : '<small>Déjà inscrit(e) ? Cliquez <a href="#login">ici</a> </small>'}
             </section>
          </main>
         
         
-        `;
+        `
 }

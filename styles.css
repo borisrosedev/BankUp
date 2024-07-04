@@ -1,27 +1,27 @@
-@import url("/src/css/base/topology.css");
-@import url("/src/css/base/variables.css");
-@import url("/src/css/utils/keyframes.css");
-@import url("/src/css/base/base.css");
+@import url('/src/css/base/topology.css');
+@import url('/src/css/base/variables.css');
+@import url('/src/css/utils/keyframes.css');
+@import url('/src/css/base/base.css');
 
 /* COMPONENTS , SOUS-ENTENDU D'UNE PAGE */
-@import url("/src/css/components/object-data.css");
-@import url("/src/css/components/paragraph.css");
-@import url("/src/css/components/button.css");
-@import url("/src/css/components/nav.css");
-@import url("/src/css/layout/notification.css");
-@import url("/src/css/layout/header.css");
-@import url("/src/css/components/main.css");
-@import url("/src/css/components/article-input.css");
-@import url("/src/css/components/form.css");
-@import url("/src/css/components/mini-profile-card.css");
+@import url('/src/css/components/object-data.css');
+@import url('/src/css/components/paragraph.css');
+@import url('/src/css/components/button.css');
+@import url('/src/css/components/nav.css');
+@import url('/src/css/layout/notification.css');
+@import url('/src/css/layout/header.css');
+@import url('/src/css/components/main.css');
+@import url('/src/css/components/article-input.css');
+@import url('/src/css/components/form.css');
+@import url('/src/css/components/mini-profile-card.css');
 
 /* MODALS */
-@import url("/src/css/modals/user-profile.css");
-@import url("/src/css/modals/wallet.css");
+@import url('/src/css/modals/user-profile.css');
+@import url('/src/css/modals/wallet.css');
 
 /* PAGES */
-@import url("/src/css/pages/home-page.css");
-@import url("/src/css/pages/log-page.css");
-@import url("/src/css/pages/dashboard-page.css");
-@import url("/src/css/pages/logout-page.css");
-@import url("/src/css/pages/not-found-page.css");
+@import url('/src/css/pages/home-page.css');
+@import url('/src/css/pages/log-page.css');
+@import url('/src/css/pages/dashboard-page.css');
+@import url('/src/css/pages/logout-page.css');
+@import url('/src/css/pages/not-found-page.css');
