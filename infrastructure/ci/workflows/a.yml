@@ -1,0 +1,14 @@
+name: test-wf
+run-name: ${{ github.actor }} is on it
+on: [push]
+jobs: 
+  message-job:
+    runs-on: ubuntu-latest #exécuteur
+    steps:
+      - uses: actions/checkout@v4
+      - uses: action/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm install
+

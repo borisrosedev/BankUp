@@ -2,3 +2,9 @@
 node_modules
 .vscode
 .DS_Store
+docs/**/*.aux
+docs/**/*.fdb_latexmk
+docs/**/*.fls
+docs/**/*.log
+docs/**/*.synctex.gz
+docs/**/*.tex
