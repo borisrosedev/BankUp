@@ -1,4 +1,4 @@
-import ArticleInput from "./ArticleInput"
+import ArticleInput from "./article-input.js"
 
 let articleInput
 describe("ArticleInput Suite", () => {
@@ -14,7 +14,7 @@ describe("ArticleInput Suite", () => {
     expect(articleInput.type).toBe("text")
   })
 
-  test("should have a text type by default", () => {
+  test("should have no className  by default", () => {
     expect(articleInput.className).toBe("")
   })
 })
