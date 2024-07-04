@@ -1,5 +1,5 @@
-import AuthService from "../services/AuthService.js"
-import NotificationService from "../services/NotificationService.js"
+import AuthService from "../services/auth-service.js"
+import NotificationService from "../services/notification-service.js"
 
 export default class LogContainer {
   constructor(onNavigate, isLoggingIn = true) {
@@ -19,7 +19,7 @@ export default class LogContainer {
     this.submitButton.disabled = true
     this.submitButton.classList.remove("button")
     this.submitButton.classList.add("disabled-button")
-
+    let confirmedPasswordValue
     const passwordValue = document.getElementById("password").value
     switch (this.isLoggingIn) {
       case true:
@@ -44,7 +44,7 @@ export default class LogContainer {
         }
         break
       case false:
-        const confirmedPasswordValue =
+        confirmedPasswordValue =
           document.getElementById("confirmed-password").value
         if (!(emailValue && passwordValue && confirmedPasswordValue)) {
           this.notificationService.setNotification({

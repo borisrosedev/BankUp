@@ -1,4 +1,4 @@
-import paragraph from "../user-interface/components/paragraph"
+import paragraph from "../user-interface/components/Paragraph/paragraph.js"
 
 export default class NotificationService {
   constructor() {

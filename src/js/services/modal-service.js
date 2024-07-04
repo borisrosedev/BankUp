@@ -1,5 +1,5 @@
-import userProfile from "../user-interface/modals/user-profile"
-import wallet from "../user-interface/modals/wallet"
+import userProfile from "../user-interface/modals/user-profile.js"
+import wallet from "../user-interface/modals/wallet.js"
 
 export default class ModalService {
   constructor(name) {
